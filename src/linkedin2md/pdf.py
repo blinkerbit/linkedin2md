@@ -30,8 +30,7 @@ def convert_md_to_pdf(markdown_content: str, pdf_path: Path) -> bool:
     try:
         # Convert Markdown to HTML
         html_body = markdown.markdown(
-            markdown_content,
-            extensions=["tables", "fenced_code"]
+            markdown_content, extensions=["tables", "fenced_code"]
         )
 
         # Styled executive A4 print CSS

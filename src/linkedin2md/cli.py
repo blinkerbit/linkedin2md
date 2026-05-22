@@ -63,6 +63,7 @@ def main() -> int:
         profile_path = args.output / "profile.md"
         if profile_path.exists():
             from linkedin2md.pdf import convert_md_to_pdf
+
             pdf_path = args.output / "profile.pdf"
             print("Generating PDF Resume...")
             if convert_md_to_pdf(profile_path.read_text(encoding="utf-8"), pdf_path):
