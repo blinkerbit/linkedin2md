@@ -77,12 +77,20 @@ class MyNewParser(BaseParser):
 4. **Ensure all checks pass** (ruff, pyright, pytest)
 5. **Submit a PR** with a clear description
 
+### AI-Assisted & Agentic Contributions (Optional)
+
+This repository is equipped with **opencode** configurations and the **NERV** orchestration framework. You can use your own AI tools or NERV directly inside this repository to assist in coding and auditing:
+
+*   **Initialize NERV environment**: Make sure you have `opencode` and `uv` installed, then run your local agent commands.
+*   **Run Spec-Driven Development**: Initiate complex features or bug fixes via `/sdd-new <change_description>` to coordinate explorers, designers, planners, and code executors automatically.
+*   **Adversarial Code Audit**: Run `/judgment-day` within the opencode terminal to trigger a dual-model adversarial code review. It will check compliance against our strict standards listed in `AGENTS.md` and export a clean synthetic audit table.
+
 ### PR Checklist
 
-- [ ] Code follows the project style
-- [ ] Tests added/updated
+- [ ] Code follows the project style and `AGENTS.md` guidelines
+- [ ] Tests added/updated (verify via `PYTHONPATH=src uv run pytest`)
 - [ ] Documentation updated (if applicable)
-- [ ] All CI checks pass
+- [ ] All CI/CD and lint checks pass
 
 ## Reporting Bugs
 

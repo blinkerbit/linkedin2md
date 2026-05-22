@@ -50,6 +50,7 @@ pip install linkedin2md
 linkedin2md Complete_LinkedInDataExport.zip
 linkedin2md export.zip -o ./my-profile
 linkedin2md export.zip --lang es
+linkedin2md export.zip --pdf  # Generate beautiful PDF CV alongside Markdown files
 ```
 
 Then drag the output folder into your favorite AI tool.
@@ -61,6 +62,7 @@ Then drag the output folder into your favorite AI tool.
 | `source` | LinkedIn ZIP export file (required) | - |
 | `-o, --output` | Output directory | `linkedin_export` |
 | `--lang` | Output language (`en` or `es`) | `en` |
+| `--pdf` | Generate an elegant A4 PDF resume from your profile | `False` |
 
 ## How to Export Your LinkedIn Data
 
@@ -161,6 +163,29 @@ Creates 40+ markdown files in the output directory, organized by category:
 ### Identity
 - `verifications.md` - Identity verifications
 - `identity_assets.md` - Uploaded documents (resumes, etc.)
+
+## 📄 PDF Resume Generation
+
+With the `--pdf` flag, `linkedin2md` converts your parsed structured data into an elegant, print-ready, professional A4 PDF Resume (`profile.pdf`):
+
+*   **Design**: Hand-crafted executive layout with pristine typography, clean margins, and print-friendly stylesheets.
+*   **Prerequisites**: Requires `weasyprint` and `markdown` libraries to be installed locally:
+    ```bash
+    pip install weasyprint markdown
+    ```
+    *(If not installed, `linkedin2md` will continue to generate your Markdown folder safely, omitting the PDF and providing setup instructions).*
+
+## 🤖 Agentic Development (NERV Framework)
+
+This repository is fully configured for **Agentic Development** using [opencode](https://opencode.ai) and the **NERV** orchestration framework. NERV coordinates specialized autonomous subagents to design, program, test, and audit code changes.
+
+### Quick Commands (Inside Opencode/Claude Code TUI):
+
+*   **SDD Pipeline (`/sdd-new <change>`)**: Starts the 8-phase Spec-Driven Development workflow (explore ➔ propose ➔ spec ➔ design ➔ tasks ➔ apply ➔ verify ➔ archive) utilizing custom subagents in `.opencode/agents/` and `.opencode/skills/`.
+*   **Adversarial Review (`/judgment-day`)**: Triggers a dual-model adversarial code review (e.g. Claude vs. Copilot) to stress-test pull requests against `AGENTS.md` standards.
+*   **Standards Audit (`/review`)**: Automatically audits files against strict linting and universal code standards.
+
+We welcome PRs developed and verified using your own AI agent setups!
 
 ## Contributing
 
