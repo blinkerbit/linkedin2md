@@ -18,8 +18,8 @@ def convert_md_to_pdf(markdown_content: str, pdf_path: Path) -> bool:
     If not installed, it falls back to showing a descriptive error message.
     """
     try:
-        import markdown
-        from weasyprint import HTML
+        import markdown  # type: ignore
+        from weasyprint import HTML  # type: ignore
     except ImportError:
         logger.error(
             "PDF generation requires the 'weasyprint' and 'markdown' packages. "
