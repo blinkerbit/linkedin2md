@@ -58,6 +58,21 @@ def main() -> int:
     for f in files:
         print(f"  - {f.name}")
 
+    # Step 4: Optional PDF Generation
+    if args.pdf:
+        profile_path = args.output / "profile.md"
+        if profile_path.exists():
+            from linkedin2md.pdf import convert_md_to_pdf
+            pdf_path = args.output / "profile.pdf"
+            print("Generating PDF Resume...")
+            if convert_md_to_pdf(profile_path.read_text(encoding="utf-8"), pdf_path):
+                print(f"Created PDF Resume: {pdf_path}")
+            else:
+                logger.error("Failed to generate PDF Resume.")
+                return 1
+        else:
+            logger.warning("Could not find profile.md to generate PDF.")
+
     return 0
 
 
@@ -84,6 +99,11 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         choices=["en", "es"],
         default="en",
         help="Output language (default: en)",
+    )
+    parser.add_argument(
+        "--pdf",
+        action="store_true",
+        help="Generate an elegant A4 PDF resume from your profile",
     )
     return parser.parse_args(argv)
 
