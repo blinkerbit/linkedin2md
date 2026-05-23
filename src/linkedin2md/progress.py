@@ -20,6 +20,10 @@ def show_progress(
 
     Uses an animated spinner on interactive terminals and a single status
     line on non-TTY streams (pipes, CI, captured output).
+
+    Args:
+        message: Status text shown to the user. Must not contain user-supplied
+            input without ANSI/terminal control sanitization.
     """
     output = stream if stream is not None else sys.stderr
 
