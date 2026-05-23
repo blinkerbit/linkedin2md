@@ -4,6 +4,8 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/linkedin2md)](https://pypi.org/project/linkedin2md/)
 [![License](https://img.shields.io/pypi/l/linkedin2md)](https://github.com/juanmanueldaza/linkedin2md/blob/main/LICENSE)
 [![CI](https://github.com/juanmanueldaza/linkedin2md/actions/workflows/ci.yml/badge.svg)](https://github.com/juanmanueldaza/linkedin2md/actions/workflows/ci.yml)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/juanmanueldaza/linkedin2md/issues)
+[![Good First Issues](https://img.shields.io/github/issues/juanmanueldaza/linkedin2md/good%20first%20issue?style=flat-square&label=good%20first%20issues)](https://github.com/juanmanueldaza/linkedin2md/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 Convert LinkedIn data exports to clean Markdown files - the ideal format for LLM analysis.
 
@@ -189,7 +191,11 @@ We welcome PRs developed and verified using your own AI agent setups!
 
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions from everyone! Whether it's a bug fix, new feature, improved documentation, or a translation — we'd love your help.
+
+- See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions, coding standards, and PR workflow.
+- Look for [good first issues](https://github.com/juanmanueldaza/linkedin2md/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for beginner-friendly tasks.
+- Be respectful, inclusive, and constructive in all interactions.
 
 ## License
 
