@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-05-22
+
+### Added
+- Optional A4 PDF Resume Generator (`--pdf` flag) producing print-ready professional CVs via WeasyPrint
+- NERV Agentic Development framework configuration (opencode.json, agents, skills)
+- GitHub Pages landing page with custom domain, structured data, and GA4 Consent Mode v2
+- OG image meta tags for social media sharing
+
+### Changed
+- Improved README documentation with PDF and NERV sections
+- Better social sharing titles and descriptions
+
+### Fixed
+- Type ignore comments for optional imports in pdf.py to pass pyright CI
+- Long docstring lines in pdf.py to comply with ruff 88-char limit
+- Code formatting compliance with ruff standards
+
 ## [0.3.0] - 2025-01-20
 
 ### Added
@@ -77,7 +94,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SOLID architecture for extensibility
 - Security features (path traversal protection, URL sanitization, file size limits)
 
-[Unreleased]: https://github.com/juanmanueldaza/linkedin2md/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/juanmanueldaza/linkedin2md/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/juanmanueldaza/linkedin2md/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/juanmanueldaza/linkedin2md/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/juanmanueldaza/linkedin2md/compare/v0.1.3...v0.2.0
 [0.1.3]: https://github.com/juanmanueldaza/linkedin2md/compare/v0.1.2...v0.1.3
